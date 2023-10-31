@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body {
+				background-repeat: no-repeat;
+				background-attachment: fixed;		
+				background: 
+				linear-gradient(
+				  rgba(255, 255, 255, 0.5), 
+				  rgba(255, 255, 255, 0.5)
+				),
+				url('Imagens/fundoOrange.png');
+				font-family: Helvetica;
+		}
+
+		table {
+			border-color: white;
+		}
+		
+		#logotipo {
+			padding-left:20px;
+			padding-right:20px;
+			text-align:center;
+		}
+		
+		#nomeEmp {
+			color:white;
+			text-align:center;
+			font-family:helvetica;
+			font-size:30px;
+			font-weight: bold;
+		}
+		
+		.tabelaPrincipal{
+			border-radius: 12px;
+			font-family: Helvetica;		
+			background-color: black;
+		}
+		
+		#tabela1 {
+			margin-bottom:30px;
+			margin-top:50px;
+		}
+			
+		.tabelaSecund {
+			padding-left:10px; 
+			padding-right:10px;
+			font-family: Helvetica;
+			text-align: center;
+			font-size: 12px;
+			color:white;
+		}
+				
+		#cabecalhoTabela {
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
+			color: white;
+		}
+		
+		#linhaHorizontalCabec {
+			border: 0;
+			height: 2px;
+			background-image: linear-gradient(to right, transparent, #fff, transparent);
+		}
+		
+		#linhaVertical	{
+			border-right: 5px solid #f16000;
+			margin-right: 5px;	
+			opacity: 1;	
+			border-radius: 5px;			
+			height: 150px;
+			
+		}
+		
+		.camposCentrEsq {
+			padding-bottom: 15px; 
+			padding-right: 20px;
+			padding-left: 10px;
+			text-align: left;
+			color: white;
+			text-align: justify;
+			font-size: 12px;
+		}
+		
+		.camposCentrDir {
+			padding: 0px 20px 15px 10px; 
+			text-align: left;
+			color: white;
+			text-align: justify;
+			font-size: 12px;
+		}
+		
+		#cabecalhoItens {
+			margin-top: 45px;
+			color: white;
+			font-family: helvetica;
+		}
+		
+		#rodapeTabela{
+			border-bottom-left-radius: 12px;
+			border-bottom-right-radius: 12px;
+			background-repeat: repeat;
+			background: 
+			linear-gradient(
+			  rgba(241, 96, 0, 0.8),
+			  rgba(241, 96, 0, 0.4)
+			),
+			url('Imagens/panel-background-dark-blue.svg');
+			margin-top:50px;
+			font-family: Helvetica;
+			font-size: 12px;
+			color: #ffffff;
+			padding-top: 30px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		
+		.botao{
+			background: #ffffff; 		 
+			border-radius: 5px; 
+			padding: 10px; 
+			cursor: pointer; 
+			color: black; 
+			border: none; 
+			font-size: 12px; 
+			font-weight: bold;
+			margin-top:20px;
+			margin-bottom:20px;
+			margin-left: 20px;
+			font-family: helvetica;
+			border-color: ffffff;
+		}
+		
+		.botao:hover{
+			-webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			transform: scale(1.1);
+			font-weight: bold;
+			background-color: #f16000;
+			color: white;
+		}
+		
+		.textoRadio{
+			color: #ffffff; 
+			font-size: 12px; 
+			font-family: Helvetica;
+			font-weight: bold;
+			padding-top: 10px;
+			cursor: pointer; 
+		}
+							
+		.textoRadio:hover{
+			-webkit-transform: translateX(-1px);
+			transform: translateX(-1px);
+			font-weight: bold;
+			font-size: 15px;
+		}	
+
+		.textarea{
+			border-radius: 8px; 
+			color: #000000; 
+			font-size: 12px; 
+			font-family: Helvetica, sans-serif;
+		}
+	</style>
+	<title>Workflow de Autorização Orange</title>
+	<meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1" charset="UTF-8">
+</head>
+<body>
+	<form method="post" action="mailto:%WFMailTo%" name="form2" id="form2">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td>
+					<table border="0" align="center" cellpadding="0" cellspacing="0" width="80%" class="tabelaPrincipal" id="tabela1">
+							<tr>
+								<td>
+									<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%" class="tabelaPrincipal">
+										<tr>
+											<td width="15%" id="logotipo">
+												<img alt="LogoOrange" src="Imagens/orange_logo_preto.png" width="200">
+											</td>
+											<td width="70%" id="nomeEmp">
+												<p>ORANGE BUSINESS SERVICES</p>
+											</td>
+											<td width="15%" style="padding-left:20px; padding-right:20px;text-align:center;">													
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table border="0"align="center" cellpadding="0" cellspacing="0" width="80%" class="tabelaPrincipal">
+						<tr>
+							<td>
+								<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%" id="cabecalhoTabela">
+									<thead>
+										<th>
+											<h3>APROVADOR</h3>
+											<hr id="linhaHorizontalCabec">
+										</th>
+									</thead>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%">
+									<tr>
+										<td width="50%">
+											<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%">
+												<tr width="1%">
+													<td>
+														<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td>
+																	<div id="linhaVertical"></div>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td width="90%">
+														<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td class="camposCentrEsq" style = "padding-top:10px;">
+																	<b>CÓD. ATIVO:</b>
+																	&nbsp;Lorem ipsum dolor sit amet.
+																</td>
+															</tr>
+															<tr>
+																<td class="camposCentrEsq">
+																	<b>PART NUMBER:</b>
+																	&nbsp;Lorem ipsum dolor sit amet.
+																</td>
+															</tr>
+															<tr>
+																<td class="camposCentrEsq">
+																	<b>SERIAL NUMBER:</b> 
+																	&nbsp;Lorem ipsum dolor sit amet.
+																</td>
+															</tr>
+															<tr>
+																<td class="camposCentrEsq">
+																	<b>TP. MOVIMENTAÇÃO:</b> 
+																	&nbsp;Lorem ipsum dolor sit amet.
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>		
+										</td>
+										<td width="50%">
+											<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+													<td width="1%">
+														<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td>
+																	<div id="linhaVertical"></div>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td width="90%">
+														<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%">
+															<tr>
+																<td class="camposCentrDir" style = "padding-top:10px;">
+																	<b>DT. VIGÊNCIA INICIAL:</b>
+																	&nbsp;Lorem ipsum dolor sit amet.
+																</td>
+															</tr>
+															<tr>
+																<td class="camposCentrDir">
+																	<b>DT. VIGÊNCIA FINAL:</b>
+																	&nbsp;Lorem ipsum dolor sit amet.
+																</td>
+															</tr>
+															<tr>
+																<td class="camposCentrDir">
+																	<b>UNID. ORIGEM:</b>
+																	&nbsp;Lorem ipsum dolor sit amet.
+																</td>
+															</tr>
+															<tr>
+																<td class="camposCentrDir">
+																	<b>UNID. DESTINO:</b>
+																	&nbsp;Lorem ipsum dolor sit amet.
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>		
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%" id="cabecalhoItens">
+									<thead>
+										<th>
+											<h3>MOVIMENTAÇÃO A LIBERAR</h3>
+										</th>
+									</thead>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0"align="center" cellpadding="0" cellspacing="0" width="95%" class="tabelaSecund">
+									<thead>
+										<th width = "25%">	
+											<hr id="linhaHorizontalItens">
+											<b>TIPO DE MOVIMENTAÇÃO</b>
+											<hr id="linhaHorizontalItens">
+										</th>
+										<th width = "25%">
+											<hr id="linhaHorizontalItens">
+											<b>ORIGEM SOLICITADA</b>
+											<hr id="linhaHorizontalItens">
+										</th>
+										<th width = "25%">
+											<hr id="linhaHorizontalItens">
+											<b>UNID. DE DESTINO SOLICITADA</b>
+											<hr id="linhaHorizontalItens">
+										</th>
+										<th width = "20%">
+											<hr id="linhaHorizontalItens">
+											<b>INÍCIO DE VIGÊNCIA</b>
+											<hr id="linhaHorizontalItens">
+										</th>
+									</thead>
+									<tbody>
+										<tr>												
+											<td>
+												<p>
+													Lorem ipsum dolor sit amet.
+												</p>
+											</td>
+											<td>
+												<p>
+													Lorem ipsum dolor sit amet.
+												</p>
+											</td>
+											<td>
+												<p>
+													Lorem ipsum dolor sit amet.
+												</p>
+											</td>
+											<td>
+												<p>
+													Lorem ipsum dolor sit amet.
+												</p>
+											</td>										
+										</tr>
+									</tbody>
+									<tfoot>
+										<th>
+											<hr id="linhaHorizontalItens">
+										</th>
+										<th>
+											<hr id="linhaHorizontalItens">
+										</th>
+										<th>
+											<hr id="linhaHorizontalItens">
+										</th>
+										<th>
+											<hr id="linhaHorizontalItens">
+										</th>
+									</tfoot>									
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%" id="rodapeTabela">
+									<tr>
+										<td>
+											<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%" style="font-size: 20px; padding-right: 50px;">
+												<thead>
+													<th>
+														<b>APROVAÇÃO:</b>
+													</th>
+												</thead>
+											</table>
+										</td>
+										<td>
+											<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+													<td class="textoRadio">
+														<input type="radio" name="OPC" value="%OPC%S">
+														<span>SIM </span> 
+													</td>
+												</tr>
+												<tr>
+													<td class="textoRadio">
+														<input type="radio" name="OPC" value="%OPC%N">
+														<span>NÃO (especificar o motivo) </span> 
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td>
+											<table border="0"align="right" cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+													<td style="text-align:right;">
+														<textarea name="OBS" id="OBS" cols="70" rows="5" class="textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum quam sed urna pulvinar, sed viverra ligula rhoncus. Donec augue purus, fringilla vel tellus eget, suscipit convallis justo. Donec dui neque, lobortis a rhoncus eu, bibendum eget ante. Suspendisse feugiat orci non diam suscipit, ac lobortis nulla convallis.</textarea>   
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+										<td>
+											&nbsp;
+										</td>
+										<td align="right" >            
+											<input  name="B1" type="submit" class="botao" value="ENVIAR" onclick="return validaRadio()" />          	
+											<input name="B2" type="reset" class="botao" value="LIMPAR" />        
+										</td>
+									</tr>
+									<input type="hidden" name="CHAVE" 	value="!CHAVE!">
+									<input type="hidden" name="CFILANT" value="!CFILANT!">
+									<input type="hidden" name="WF" 		value="!WF!">
+									<input type="hidden" name="WFID" 	value="!WFID!">
+									<input type="hidden" name="APROV" 	value="!APROV!">
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table border="0"align="center" cellpadding="0" cellspacing="0" width="100%" style="margin-top:30px;">
+							<tr>
+								<td>
+									<p style="color: white; font-size: 10px; font-family: Helvetica; text-align: center;font-weight: bold;">
+										<b>WorkFlow @ Microsiga Protheus</b>
+									</p>
+								</td>
+							</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	<script language="JavaScript">
+		function validaRadio() {
+			if (document.form2.OPC[0].checked)
+			{
+				document.getElementById("form2").submit();
+			}
+
+		else if (document.form2.OPC[1].checked)
+		{
+			if(document.getElementById("OBS").value == '')
+			{
+				alert('Opção [NÃO] selecionada. Digite o motivo na área para texto.');
+				return false;
+			}
+			else
+			{
+				document.getElementById("form2").submit();
+			}
+		}
+		else if (document.form2.OPC[0].checked == false && document.form2.OPC[1].checked == false) 
+		{
+			alert('Por favor, selecione uma das opções.');
+			return false;
+		}
+
+		}
+	</script>
+</body>
+</html>

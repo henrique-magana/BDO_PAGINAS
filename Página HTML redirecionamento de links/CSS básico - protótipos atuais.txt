@@ -1,0 +1,19 @@
+Pág. 2
+Fundo escuro -> cor #333333 (com gradiente)
+Triângulo claro -> cor #ffffff
+Triângulo vermelho -> cor #e81a3b
+Cor da fonte -> #333333 e #ffffff
+Fonte -> Arial
+
+Pág. 3
+Fundo -> imagem
+Barra avermelhada -> cor #e81a3b
+Fundo claro -> cor #ffffff (opacidade 80%)
+Cor da fonte -> #333333
+Fonte -> Arial
+
+Pág. 4
+Fundo escuro -> cor #140939 (com gradiente)
+Barra avermelhada -> cor #e81a3b
+Cor da fonte -> #ffffff e #333333
+Fonte -> Arial

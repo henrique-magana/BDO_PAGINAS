@@ -1,0 +1,826 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+	<style type="text/css">
+		body {
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background:
+				linear-gradient(rgba(0, 0, 0, 0.07),
+					rgba(0, 0, 0, 0.07)),
+				url('Imagens/panel-background.svg');
+		}
+
+		h1 {
+			color: #4c7a34;
+			font-family: Fedra, sans-serif;
+			text-align: center;
+			font-size: 50px;
+		}
+
+		h1:hover {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1.1);
+		}
+
+		.tabelaPrincipal {
+			border-radius: 12px;
+			background-color: #ffffff;
+			font-family: Fedra, sans-serif;
+		}
+
+		#tabela1 {
+			margin-bottom: 30px;
+		}
+
+		#tabela2 {
+			color: #7b9e38;
+			font-weight: bold
+		}
+
+		.tabela3 {
+			margin-top: 50px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-family: Fedra, sans-serif;
+			text-align: center;
+			font-size: 12px;
+		}
+
+		#tabela4 {
+			margin-bottom: 30px;
+			margin-top: 30px;
+			color: #7b9e38;
+			font-weight: bold;
+			border-collapse: collapse;
+		}
+
+		#tabela5 {
+			margin-top: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-family: Fedra, sans-serif;
+			text-align: center;
+			font-size: 12px;
+			color: #000000;
+			font-size: 12px;
+			font-family: Fedra, sans-serif;
+		}
+
+		#tabela6 {
+			margin-top: 50px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-family: Fedra, sans-serif;
+			text-align: center;
+			font-size: 12px;
+			color: #000000;
+		}
+
+		#tabela7 {
+			margin-bottom: 30px;
+			margin-top: 30px;
+			color: #7b9e38;
+			font-weight: bold;
+			border-collapse: collapse;
+		}
+
+		#cabecalhoTabela {
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
+		}
+
+		#rodapeTabela {
+			border-bottom-left-radius: 12px;
+			border-bottom-right-radius: 12px;
+			background-repeat: repeat;
+			background:
+				linear-gradient(rgba(42, 86, 143, 0.8),
+					rgba(42, 86, 143, 0.8)),
+				url('Imagens/panel-background-dark-blue.svg');
+			margin-top: 50px;
+			font-family: Fedra, sans-serif;
+			font-size: 12px;
+			color: #ffffff;
+			padding-top: 30px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+
+		h3 {
+			color: #7b9e38;
+			font-family: Fedra, sans-serif;
+			text-align: center;
+		}
+
+		h3:hover {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1.1);
+		}
+
+		#linhaHorizontalCabec {
+			border: 0;
+			height: 2px;
+			background-image: linear-gradient(to right, transparent, #CCC, transparent);
+		}
+
+		#linha-vertical {
+			height: 120px;
+			border-right: 5px solid #7b9e38;
+			margin-right: 5px;
+			opacity: 1;
+		}
+
+		#linha-vertical:hover {
+			opacity: 0.7;
+		}
+
+		#linhaHorizontalItens {
+			border-top: 5px solid #7b9e38;
+			width: 50px;
+			opacity: 1;
+		}
+
+		#linhaHorizontalItens:hover {
+			opacity: 0.7;
+		}
+
+		#totais {
+			font-family: Fedra, sans-serif;
+			text-align: center;
+			font-size: 12px;
+			background-color: #7b9e38;
+			color: #ffffff;
+			opacity: 1;
+		}
+
+		#totais:hover {
+			opacity: 0.9;
+		}
+
+		#totais2 {
+			font-family: Fedra, sans-serif;
+			text-align: center;
+			font-size: 12px;
+			background-color: #f6fbf2;
+			color: #7b9e38;
+			opacity: 1;
+		}
+
+		#totais2:hover {
+			opacity: 0.7;
+		}
+
+		.textarea {
+			border-radius: 8px;
+			color: #000000;
+			font-size: 12px;
+			font-family: Fedra, sans-serif;
+		}
+
+		.textarea:hover {
+			-webkit-transform: scale(1);
+			-ms-transform: scale(1);
+			transform: scale(1.1);
+		}
+
+		.botao {
+			background: #2d617f;
+			border-radius: 6px;
+			padding: 10px;
+			cursor: pointer;
+			color: #ffffff;
+			border: none;
+			font-size: 12px;
+			font-weight: bold;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.botao:hover {
+			-webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			transform: scale(1.1);
+			font-weight: bold;
+		}
+
+		.lista:hover {
+			-webkit-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+
+		.textoRadio {
+			color: #ffffff;
+			font-size: 13px;
+			font-family: Fedra, sans-serif;
+		}
+
+		.textoRadio:hover {
+			-webkit-transform: translateX(-1px);
+			transform: translateX(-1px);
+			font-weight: bold;
+		}
+
+		/* estilo do botão para mostrar/esconder a tabela */
+		.expand-btn {
+			background:
+				linear-gradient(rgba(42, 86, 143, 0.8),
+					rgba(42, 86, 143, 0.8)),
+				url('Imagens/panel-background-dark-blue.svg');
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			font-family: Fedra, sans-serif;
+			font-weight: bold;
+			width: 100%
+		}
+
+		/* estilo do botão quando passa o cursor em cima */
+		.expand-btn:hover {
+			background-color: #3e8e41;
+		}
+
+		.expand-content {
+			display: none;
+		}
+
+		.expand-content.show {
+			display: block;
+		}
+
+		.cottable {
+			width: 98%;
+			border-collapse: collapse;
+			background-color: #f5f5f5;
+			font-family: Arial, sans-serif;
+			color: #333;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#CotTab1 {
+			padding: 5px;
+			border: 1px solid #ccc;
+			text-align: center;
+			width: 25%;
+			height: 22px;
+			font-weight: normal;
+		}
+
+		/* Estilos da tabela com nth-child e hover */
+		.cottable1 tr:nth-child(even) {
+			background-color: #f9f9f9;
+		}
+
+		.cottable1 tr:hover {
+			background-color: #eaeaea;
+		}
+
+		#scroll-to-top {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 40px;
+			height: 40px;
+			background-color: #2d617f;
+			color: #fff;
+			text-align: center;
+			line-height: 40px;
+			font-size: 20px;
+			cursor: pointer;
+			border: none;
+			border-radius: 50%;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+			transition: opacity 0.3s;
+			z-index: 9999;
+		}
+	</style>
+
+	<title>Workflow de Autorização Albioma</title>
+	<meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1" charset="UTF-8">
+
+</head>
+
+<body>
+	<form method="post" action="mailto:%WFMailTo%" name="form2" id="form2">
+
+		<button type="button" onclick="scrollToTop()" id="scroll-to-top" title="Subir para o Topo">^</button>
+
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td>
+					<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%">
+						<tr>
+							<td>
+								<h1>ALBIOMA</h1>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table border="0" align="center" cellpadding="0" cellspacing="0" width="80%" class="tabelaPrincipal"
+						id="tabela1">
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%"
+									class="tabelaPrincipal" id="tabela2">
+									<tr>
+										<td width="30%" style="padding-left:20px; padding-right:20px;">
+											<img alt="LogoAlbioma" src="Imagens/logo.png" width="200">
+										</td>
+										<td width="40%" style="text-align:center;">
+											<p>!DESCFILIAL!</p>
+										</td>
+										<td width="30%" style="text-align:center;">
+											<p>!TIPO! de Compra: !PEDIDO!</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table border="0" align="center" cellpadding="0" cellspacing="0" width="80%"
+						class="tabelaPrincipal">
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%"
+									id="cabecalhoTabela">
+									<tr>
+										<td>
+											<h3>!CABEC! !NOMAPROV!</h3>
+											<hr id="linhaHorizontalCabec">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%">
+									<tr>
+										<td>
+											<table border="0" align="center" cellpadding="0" cellspacing="0"
+												width="100%">
+												<tr>
+													<td>
+														<div id="linha-vertical"></div>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td width="40%">
+											<table border="0" align="center" cellpadding="0" cellspacing="0"
+												width="100%">
+												<tr>
+													<td style="padding: 10px 0px 7px 10px; text-align: left;">
+														<b>Fornecedor:</b>&nbsp;!FORNECEDOR!
+													</td>
+												</tr>
+												<tr>
+													<td style="padding: 10px 0px 7px 10px; text-align: left;">
+														<b>Emissão:</b>&nbsp;!EMISSAO!
+													</td>
+												</tr>
+												<tr>
+													<td style="padding: 10px 0px 7px 10px; text-align: left;">
+														<b>Cond. Pagto.:</b> &nbsp;!LB_COND!
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td>
+											<table border="0" align="center" cellpadding="0" cellspacing="0"
+												width="100%">
+												<tr>
+													<td>
+														<div id="linha-vertical"></div>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td>
+											<table border="0" align="center" cellpadding="0" cellspacing="0"
+												width="100%">
+												<tr>
+													<td style="padding: 20px 10px 20px 10px; text-align: left;">
+														<b>Descrição Geral:</b>&nbsp;!DESCRICAO!
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%"
+									class="tabela3">
+									<tr>
+										<td class="lista">
+											<b>ITEM</b>
+											<hr id="linhaHorizontalItens">
+										</td>
+										<td class="lista">
+											<b>PRODUTO</b>
+											<hr id="linhaHorizontalItens">
+										</td>
+										<td class="lista">
+											<b>C. DE CUSTO</b>
+											<hr id="linhaHorizontalItens">
+										</td>
+										<td class="lista">
+											<b>PEDIDO COMLINK</b>
+											<hr id="linhaHorizontalItens">
+										</td>
+										<td class="lista">
+											<b>QUANTIDADE</b>
+											<hr id="linhaHorizontalItens">
+										</td>
+										<td class="lista">
+											<b>UN. M</b>
+											<hr id="linhaHorizontalItens">
+										</td>
+										<td class="lista">
+											<b>VLR. UNIT</b>
+											<hr id="linhaHorizontalItens">
+										</td>
+										<td class="lista">
+											<b>VLR. TOTAL</b>
+											<hr id="linhaHorizontalItens">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p>%IT.ITEM%</p>
+										</td>
+										<td>
+											<p>%IT.CODIGO% - %IT.DESCRICAO%</p>
+										</td>
+										<td>
+											<p>%IT.CENTROCUSTO%</p>
+										</td>
+										<td>
+											<p>%IT.C7_NUMCOMLINK%</p>
+										</td>
+										<td>
+											<p>%IT.C7_QUANT%</p>
+										</td>
+										<td>
+											<p>%IT.UNIDADE%</p>
+										</td>
+										<td>
+											<p>%IT.PRECO%</p>
+										</td>
+										<td>
+											<p>%IT.C7_TOTAL%</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%"
+									style="margin-top:50px; padding-right:20px;">
+									<tr>
+										<td width="20%">
+											&nbsp;
+										</td>
+										<td id="totais">
+											<b>Valor Total</b>
+										</td>
+										<td id="totais2">
+											<p>!LBVALOR!</p>
+										</td>
+										<td id="totais">
+											<b>Valor Frete</b>
+										</td>
+										<td id="totais2">
+											<p>!LBFRETE!</p>
+										</td>
+										<td id="totais">
+											<b>Valor Total + IPI</b>
+										</td>
+										<td id="totais2">
+											<p>!LBTOTAL!</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%"
+									id="rodapeTabela">
+									<tr>
+										<td>
+											<table border="0" align="center" cellpadding="0" cellspacing="0"
+												width="100%">
+												<tr>
+													<td>
+														<b>APROVAÇÃO:</b>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td>
+											<table border="0" align="center" cellpadding="0" cellspacing="0"
+												width="100%">
+												<tr>
+													<td class="textoRadio">
+														<input type="radio" name="OPC" value="%OPC%S">
+														<span>SIM </span>
+													</td>
+												</tr>
+												<tr>
+													<td class="textoRadio">
+														<input type="radio" name="OPC" value="%OPC%N">
+														<span>NÃO (especificar o motivo) </span>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td>
+											<table border="0" align="right" cellpadding="0" cellspacing="0"
+												width="100%">
+												<tr>
+													<td style="text-align:right;">
+														<textarea name="OBS" id="OBS" cols="90" rows="5"
+															class="textarea">%OBS%</textarea>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+										<td>
+											&nbsp;
+										</td>
+										<td align="right">
+											<input name="B1" type="submit" class="botao" value="ENVIAR"
+												onclick="return validaRadio()" />
+											<input name="B2" type="reset" class="botao" value="LIMPAR" />
+										</td>
+									</tr>
+									<input type="hidden" name="CHAVE" value="!CHAVE!">
+									<input type="hidden" name="CFILANT" value="!CFILANT!">
+									<input type="hidden" name="WF" value="!WF!">
+									<input type="hidden" name="WFID" value="!WFID!">
+									<input type="hidden" name="APROV" value="!APROV!">
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table border="0" align="center" cellpadding="0" cellspacing="0" width="80%" class="tabelaPrincipal"
+						id="tabela7">
+						<tr>
+							<td>
+								<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%"
+									class="tabelaPrincipal" id="tabela2">
+									<tr>
+										<td>
+											<h3>HIST&Oacute;RICO DA COTA&Ccedil;&Atilde;O</h3>
+											<hr id="linhaHorizontalCabec">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<td>
+							<table border="0" align="center" cellpadding="0" cellspacing="0" width="96%"
+								class="tabelaPrincipal" id="tabela4">
+								<tr>
+									<td>
+										<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%"
+											class="tabelaPrincipal">
+											<tr>
+												<td width="40%" style="text-align:center;">
+													<button type="button" class="expand-btn"
+														onclick="document.getElementById('myTable1').classList.toggle('show')">FORNECEDOR
+														1 - R$ 1000</button>
+													<div id="myTable1" class="expand-content">
+														<table class="cottable cottable1">
+															<tr style="height: 22px;background-color: #d9d9d9;">
+																<td id="CotTab1"><strong>C&oacute;digo/Loja Forn.</td>
+																<td id="CotTab1"><strong>Cond. Pagto</strong></td>
+																<td id="CotTab1"><strong>Vlr. Total dos Itens</strong>
+																</td>
+															</tr>
+															<tr style="height: 22px;">
+																<td id="CotTab1">BDO</td>
+																<td id="CotTab1">30D</td>
+																<td id="CotTab1">3</td>
+															</tr>
+														</table>
+														<table class="cottable cottable1">
+															<tr style="height: 22px;background-color: #d9d9d9;">
+																<td id="CotTab1"><strong>Item</strong></td>
+																<td id="CotTab1"><strong>Produto</strong></td>
+																<td id="CotTab1"><strong>Qtde.</strong></td>
+																<td id="CotTab1"><strong>Vlr. Total</strong></td>
+																<td id="CotTab1"><strong>Dt. Entrega</strong></td>
+															</tr>
+															<tr style="height: 22px;">
+																<td id="CotTab1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas dui ac risus tempus facilisis. Phasellus convallis semper lectus, sed placerat quam. Morbi semper accumsan ante, in pretium eros scelerisque at. Aliquam mollis luctus dolor, ac blandit erat convallis et. Cras consectetur dolor purus, sed consequat orci malesuada vitae. Donec quis imperdiet diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id risus felis. Praesent placerat mauris vitae metus gravida malesuada. Proin semper urna eget neque rhoncus suscipit. Sed fermentum viverra aliquet. Aliquam porttitor volutpat dolor et ultrices. Quisque eu purus congue, viverra diam et, suscipit orci.
+
+																	Cras vitae ornare ligula. Praesent eleifend tincidunt tellus, a sodales augue ultrices vel. Sed sed felis dui. Proin euismod ac sapien vel mollis. Nulla non aliquam turpis, eget ultricies lectus. Suspendisse sed egestas velit. Sed cursus orci et tortor rhoncus blandit. Suspendisse id lobortis dui, non mollis justo. Sed a maximus lorem. Aenean sed lacinia felis. Pellentesque vel scelerisque eros. Suspendisse eget consequat massa, id feugiat felis.</td>
+																<td id="CotTab1">
+																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas dui ac risus tempus facilisis. Phasellus convallis semper lectus, sed placerat quam. Morbi semper accumsan ante, in pretium eros scelerisque at. Aliquam mollis luctus dolor, ac blandit erat convallis et. Cras consectetur dolor purus, sed consequat orci malesuada vitae. Donec quis imperdiet diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+																</td>
+																<td id="CotTab1">1</td>
+																<td id="CotTab1">2</td>
+																<td id="CotTab1">13/04/2023</td>
+															</tr>
+															<tr style="height: 22px;">
+																<td id="CotTab1">0002</td>
+																<td id="CotTab1">PROD2</td>
+																<td id="CotTab1">2</td>
+																<td id="CotTab1">2</td>
+																<td id="CotTab1">13/04/2023</td>
+															</tr>
+															<tr style="height: 22px;">
+																<td id="CotTab1">0002</td>
+																<td id="CotTab1">PROD3</td>
+																<td id="CotTab1">2</td>
+																<td id="CotTab1">2</td>
+																<td id="CotTab1">13/04/2023</td>
+															</tr>
+															<tr style="height: 22px;">
+																<td id="CotTab1">0002</td>
+																<td id="CotTab1">PROD4</td>
+																<td id="CotTab1">2</td>
+																<td id="CotTab1">2</td>
+																<td id="CotTab1">13/04/2023</td>
+															</tr>
+														</table>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<table border="0" align="center" cellpadding="0" cellspacing="0" width="96%"
+								class="tabelaPrincipal" id="tabela4">
+								<tr>
+									<td>
+										<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%"
+											class="tabelaPrincipal">
+											<tr>
+												<td width="40%" style="text-align:center;">
+													<button type="button" class="expand-btn"
+														onclick="document.getElementById('myTable2').classList.toggle('show')">FORNECEDOR
+														1 - R$ 1000</button>
+													<div id="myTable2" class="expand-content">
+														<table class="cottable cottable1">
+															<tr style="height: 22px;background-color: #d9d9d9;">
+																<td id="CotTab1"><strong>Fornecedor</td>
+																<td id="CotTab1"><strong>Cond. Pagto</strong></td>
+																<td id="CotTab1"><strong>Vlr. Total dos Itens</strong>
+																</td>
+															</tr>
+															<tr style="height: 22px;">
+																<td id="CotTab1">BDO</td>
+																<td id="CotTab1">30D</td>
+																<td id="CotTab1">3</td>
+															</tr>
+														</table>
+
+													</div>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<tr>
+			<td>
+				<table border="0" align="center" cellpadding="0" cellspacing="0" width="100%" style="margin-top:30px;">
+					<tr>
+						<td>
+							<p
+								style="color: #4c7a34; font-size: 10px; font-family: Fedra,sans-serif; text-align: center;">
+								<b>WorkFlow @ Microsiga Protheus</b>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</form>
+
+	<script language="JavaScript">
+
+		// função para validar campo obrigatório
+		function validaRadio() {
+			if (document.form2.OPC[0].checked) {
+				document.getElementById("form2").submit();
+			}
+
+			else if (document.form2.OPC[1].checked) {
+				if (document.getElementById("OBS").value == '') {
+					alert('Opção [NÃO] selecionada. Digite o motivo na área para texto.');
+					return false;
+				}
+				else {
+					document.getElementById("form2").submit();
+				}
+			}
+			else if (document.form2.OPC[0].checked == false && document.form2.OPC[1].checked == false) {
+				alert('Por favor, selecione uma das opções.');
+				return false;
+			}
+		}
+
+		// função para mostrar/esconder a tabela
+		function toggleTable(tableId) {
+			var table = document.getElementById(tableId);
+			if (table.classList.contains("show")) {
+				table.classList.remove("show");
+			} else {
+				table.classList.add("show");
+			}
+		}
+
+
+		// função para o botão subir ao topo
+		window.onscroll = function () {
+			scrollFunction();
+		};
+
+		function scrollFunction() {
+			var scrollToTopButton = document.getElementById("scroll-to-top");
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				scrollToTopButton.style.display = "block";
+			} else {
+				scrollToTopButton.style.display = "none";
+			}
+		}
+
+		function scrollToTop() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+
+	</script>
+
+</body>
+
+</html>

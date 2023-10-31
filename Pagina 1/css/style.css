@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+}
+
+body{
+    background-image: url('../img/fundo2.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}
+
+.cabecalho{
+    height: 150px;
+    width: 100%;
+    text-align: right;
+}
+
+.cabecalho__logo{
+    width: 170px;
+    height: 120px;
+    margin: 20px;
+}
+
+.conteudo{
+    height: 570px;
+    color: #fff;
+}
+
+.conteudo__principal{
+    margin: 30px 0 50px 80px;
+}
+
+.conteudo__principal h1{
+    font-size: 50px;
+}
+
+.conteudo__principal h2{
+    font-size: 40px;
+}
+
+.conteudo__principal h3{
+    font-size: 30px;
+}
+
+.conteudo__secundario{
+margin: 100px 0 0 100px;
+padding: 10px;
+    
+}
+
+.conteudo__secundario p{
+    font-size: 20px;
+}
+
+.conteudo__secundario ul{
+    padding: 30px;
+}
