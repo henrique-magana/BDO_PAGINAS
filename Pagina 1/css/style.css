@@ -21,17 +21,16 @@ body{
 
 .cabecalho__logo{
     width: 170px;
-    height: 120px;
+    height: 100px;
     margin: 20px;
 }
 
 .conteudo{
-    height: 570px;
     color: #fff;
 }
 
 .conteudo__principal{
-    margin: 30px 0 50px 80px;
+    margin: 20px 0 20px 80px;
 }
 
 .conteudo__principal h1{
@@ -47,7 +46,7 @@ body{
 }
 
 .conteudo__secundario{
-margin: 100px 0 0 100px;
+margin: 80px 0 0 100px;
 padding: 10px;
     
 }

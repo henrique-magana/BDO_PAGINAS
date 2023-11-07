@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+
+}
+
+body{
+    width: auto;
+    height: 648px;
+    background-image: url('../img/fundo3.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+header{
+    display: flex;
+    height: 500px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section{
+    margin-top: 200px;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0.80;
+    width: 100%;
+}
+
+h1{
+    margin: 40px 0 20px;
+    font-size: 40px;
+}
+
+p{
+    font-size: 20px;
+    margin: 20px;
+}
+ul{
+    margin: 0 0 50px;
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.logo{
+    width: 175px;
+    height: 130px;
+}
