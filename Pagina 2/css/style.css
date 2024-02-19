@@ -4,52 +4,85 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins';
-
 }
 
 body{
-    width: auto;
-    height: 648px;
-    background-image: url('../img/fundo3.jpg');
+    background-image: url('../img/fundo2.jpg');
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
+    background-attachment: fixed;  
 }
 
-header{
-    display: flex;
-    height: 500px;
-    align-items: center;
-    justify-content: space-around;
+header, footer{
+    width: 100%;
+    height: 25vh;
+}
+
+.barra{
+    background-color: red;
+    width: 18px;
+    height: 25vh;
+    margin: 0 0 0 8vh;
 }
 
 section{
-    margin-top: 200px;
-    text-align: center;
-    background-color: #fff;
-    opacity: 0.80;
     width: 100%;
+    background-color: #ffffffbd;
+    height: 50vh;
+
+}
+footer{
+    display: flex;
+    justify-content: space-between;
 }
 
 h1{
-    margin: 40px 0 20px;
-    font-size: 40px;
+    padding: 5vh 0 2vh;
+    text-align: center;
+    font-size: 5vh;
 }
 
 p{
-    font-size: 20px;
-    margin: 20px;
+    text-align: center;
+    padding: 2vh;
+    font-size: 3vh;
 }
 ul{
-    margin: 0 0 50px;
+    text-align: center;
+    padding: 2vh;
 }
 
-footer{
-    display: flex;
-    justify-content: flex-end;
-
+li{
+    font-size: 2.5vh;
 }
+
 
 .logo{
-    width: 175px;
-    height: 130px;
+    height: 20vh;
+    width: 28vh;
+    margin: 0 18px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    h1{
+        padding: 3vh 2vh 1vh;
+        text-align: center;
+        font-size: 3vh;
+    }
+    
+    p{
+        text-align: center;
+        padding: 1.5vh;
+        font-size: 2.5vh;
+    }
+    ul{
+        text-align: center;
+        padding: 2vh;
+    }
+    
+    li{
+        font-size: 2vh;
+    }
+
 }
